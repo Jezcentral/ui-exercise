@@ -47,6 +47,20 @@ table {
 	border-spacing: 0;
 }
 
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+} 
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+/* new styles */
+
 #content {
     float:left;
     width:70%;
@@ -56,12 +70,59 @@ table {
     width:30%;
 }
 .visually-hidden {
-    position: absolute;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    width: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
+    position:absolute;
+    overflow:hidden;
+    clip:rect(0 0 0 0);
+    height:1px;
+    width:1px;
+    margin:-1px;
+    padding:0;
+    border:0;
+}
+header nav ul {
+    border-bottom:1px solid #000;
+}
+header nav ul li {
+    float:left;
+    width:33.33%;
+}
+header nav ul li a {
+    background-color:#fff;
+    color:#000;
+    display:block;
+    font-family:Arial, Helvetica, sans-serif;
+    padding:0.5em;
+    text-decoration:none;
+}
+header nav ul li a:hover {
+    background-color:aquamarine;
+    text-decoration: underline;
+}
+header nav ul li a.current {
+    background-color:#000;
+    color:#fff;
+}
+.story-list li {
+    display:block;
+    float:left;
+    margin:23px 0 0 23px;
+}
+.story-list li a {
+    color:#666;
+    display:block;
+    text-decoration:none;
+    width:266px;
+}
+.story-list li a:hover {
+    text-decoration:underline;
+}
+.story-list li a h2 {
+    color:#333;
+    font-size:1.5em;
+    margin:0.5em 0;
+}
+.story-list li a p {
+    color:#666;
+    font-family:Arial, Helvetica, sans-serif;
+    min-height:40px;
 }
