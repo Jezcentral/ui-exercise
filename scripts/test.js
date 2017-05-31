@@ -19,8 +19,9 @@ function setUpTransitionChildWidth () {
 }
 
 // transition the sidebar in or out of the page
-function transitionInOrOut() {
+function transitionInOrOut(event) {
     var transitionAttribute = 'data-transition-fade-in-and-out';
     var transitionElementName = $('[' + transitionAttribute + ']').attr(transitionAttribute);
     $('#' + transitionElementName).toggleClass("width-transition").toggleClass("width-transition-hidden");
+    event.preventDefault();
 }
