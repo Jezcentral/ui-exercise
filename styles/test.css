@@ -66,8 +66,8 @@ table {
     width:70%;
 }
 #sidebar {
+    background-color:aquamarine;
     float:right;
-    width:30%;
 }
 .visually-hidden {
     position:absolute;
@@ -84,15 +84,19 @@ header nav ul {
 }
 header nav ul li {
     float:left;
-    width:33.33%;
+    width:25%;
 }
 header nav ul li a {
     background-color:#fff;
+    border-left:1px solid #000;
     color:#000;
     display:block;
     font-family:Arial, Helvetica, sans-serif;
     padding:0.5em;
     text-decoration:none;
+}
+header nav ul li:last-child a {
+    border-right:1px solid #000;
 }
 header nav ul li a:hover {
     background-color:aquamarine;
@@ -125,4 +129,20 @@ header nav ul li a.current {
     color:#666;
     font-family:Arial, Helvetica, sans-serif;
     min-height:40px;
+}
+
+/* transition CSS */
+.width-transition,
+.width-transition-hidden {
+    -webkit-transition: width 0.5s ease-in-out;
+    -moz-transition: width 0.5s ease-in-out;
+    -o-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+    overflow-x: hidden;            
+}
+.width-transition {
+    width:30%;
+}
+.width-transition-hidden {            
+    width: 0;            
 }
